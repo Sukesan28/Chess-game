@@ -1,0 +1,119 @@
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(to right , rgb(231, 135, 57) , rgb(214, 191, 89) , rgb(207, 124, 56));
+}
+.first{
+    display: flex;
+}
+.total_board {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid rgb(250, 81, 3);
+    margin: 7vh auto;
+    background-color: rgb(207, 137, 58);
+    width: fit-content;
+    height: fit-content;
+    padding: 2vmin;
+    position: relative;
+    z-index: 1;
+}
+h3 {
+    color: rgb(7, 8, 92);
+    font-size: 2.5vmin;
+}
+.left , .right{
+    height: calc(10vmin * 8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 16px;
+}
+.left h3{
+    margin: 0 8px 0 0;
+}
+.right h3{
+    margin: 0 0 0 8px;
+}
+.up h3{
+    margin: 0 0 -4px 0;
+}
+.down h3{
+    margin: 5px 0 0 0;
+}
+.down , .up{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 20px;
+    width: calc(10vmin * 8);
+}
+
+.chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 10vmin);
+    grid-template-rows: repeat(8, 10vmin);
+    margin-top: 10px;
+    height: fit-content;
+    width: fit-content;
+    border: 3px solid rgb(253, 81, 2);
+}
+
+.chessboard div {
+    font-size: 7.5vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    border: 0.5px solid rgba(247, 55, 8, 0.521);
+    position: relative;
+    z-index: 1;
+}
+
+.chessboard div:hover {
+    background-color: orange;
+}
+.highlight{
+    border: 1px solid rgba(48, 46, 46, 0.342);
+    border-radius: 50%;
+    height: 2vmin;
+    width: 2vmin;
+    background-image: linear-gradient(to top , blue , violet);
+    position: absolute;
+    z-index: 2;
+}
+.black {
+    background-color: rgb(223, 113, 45);
+}
+
+.white {
+    background-color: rgba(255, 255, 255, 0.836);
+    
+}
+
+.white_swap{
+    position: absolute;
+    left: 10%;
+    top: 0;
+    height: 100vh;
+    user-select: none;
+    width: 80vw;
+    display: none;
+    justify-content: space-around;
+    z-index: 2;
+}
+
+.black_swap{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    left: 10%;
+    width: 80vw;
+    user-select: none;
+    
+    display: none;
+    justify-content: space-around;
+    z-index: 2;
+ }
+ .coin img{
+    height: 13vh;
+    cursor: pointer;
+ }
